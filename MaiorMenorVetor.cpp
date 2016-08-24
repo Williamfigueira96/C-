@@ -1,19 +1,19 @@
 // Programa que exibe a maior inteira com sinal digitada
-// FATEC - MC - JCB - 10/08/2016 versão 0.0 
+// FATEC - MC - JCB - 10/08/2016 versÃ£o 0.0 
 #include"Meu.h"
 //
 // entry point do programa
 //
 void main(void)
 {
-	int tMaior = INT_MIN,				// inicializa com a menor inteira possível
+	int tMaior = INT_MIN,				// inicializa com a menor inteira possÃ­vel
 		tMenor = INT_MAX,	
-		vetMaior[QUANTIDADE_INTEIRAS],						// vetor para os números positivos
-		vetMenor[QUANTIDADE_INTEIRAS],						// vetor para os números negativos
+		vetMaior[QUANTIDADE_INTEIRAS],						// vetor para os nÃºmeros positivos
+		vetMenor[QUANTIDADE_INTEIRAS],						// vetor para os nÃºmeros negativos
 		vetTodasInteiras[QUANTIDADE_INTEIRAS],				// vetor com todas as quantidades de inteiras digitadas
 		cWork,												// variavel de trabalho para o BubbleSort
 		nValor,							// recebe cada inteira
-			i,							// indice e contador genérico
+			i,							// indice e contador genÃ©rico
 		cSubMaior,						// sub contador para numeros maiores 	
 		cSubMenor,						// sub contador para numeros menores 
 		cMaior,							// contador do trono Maior
@@ -28,13 +28,13 @@ void main(void)
 	{
 		cout << "\n\nDigite a inteira com sinal de ordem: " << i+1 << ": " ;
 		cin >> nValor;					// recebe a inteira			
-		if(nValor > tMaior)			// a digitada é maior que a do trono?
+		if(nValor > tMaior)			// a digitada Ã© maior que a do trono?
 		 {
 			tMaior = nValor;			// salva a inteira de maior valor 
 			vetMaior[cSubMaior] = tMaior;	// o vetor indexado pelo contador vetMaior recebe o valor do trono maior
 			cSubMaior++;					// acrescenta mais um ao contador
 		 }
-		if(nValor < tMenor)			// a digitada é menor que a do trono?	 
+		if(nValor < tMenor)			// a digitada Ã© menor que a do trono?	 
 			{
 				tMenor = nValor;			// salva a inteira de maior valor cMenor++;					// acrescenta +1 ao contador cMenor.
 				vetMenor[cSubMenor] = tMenor; // o vetor indexado pelo contador vetMenor recebe o valor do trono menor
@@ -74,7 +74,7 @@ void main(void)
 		PAUSA;
 	}
 
-	cout << "Todas as inteiras digitadas pelo usuário: ";
+	cout << "Todas as inteiras digitadas pelo usuÃ¡rio: ";
 	for(int t = 0; t < QUANTIDADE_INTEIRAS; t++)
 	{
 		cout << vetTodasInteiras[t] << " ";					// exibe todas as inteiras
@@ -82,6 +82,7 @@ void main(void)
 	cout << endl << endl;
 	PAUSA;
 	// Listagem organizada de valores com bubble sort
+	//-----------------------------------------------------------------------------BUBBLESORT
 	do
 	{
 		HouveTroca = false;
@@ -97,6 +98,7 @@ void main(void)
 		
 		} // fim do for
 	} while (HouveTroca == true);
+	//----------------------------------------------------------------------------------- BUBBLESORT
 	// Exibir a listagem com bublesort
 	for(int t = 0; t < QUANTIDADE_INTEIRAS; t++)
 	{
