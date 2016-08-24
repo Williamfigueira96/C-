@@ -40,13 +40,13 @@ void main(void)
 			}
 		if(nValor > 0)
 		{
-			vetMaior[cSubPositivo] = tMaior;	// o vetor indexado pelo contador vetMaior recebe o valor do trono maior
+			vetMaior[cSubPositivo] = tMaior;	// o vetor indexado pelo contador vetMaior recebe o valor maior digitado 
 			cSubPositivo++;					// acrescenta mais um ao contador
 			cMaior++;
 		}
 		else 
 		{
-			vetMenor[cSubNegativo] = tMenor; // o vetor indexado pelo contador vetMenor recebe o valor do trono menor
+			vetMenor[cSubNegativo] = tMenor; // o vetor indexado pelo contador vetMenor recebe o valor menor digitado
 			cSubNegativo++;				// acrescenta mais um ao contador 
 			 cMenor++;
 		}
@@ -56,7 +56,7 @@ void main(void)
 	cout << "\nA maior inteira foi: " << tMaior << "\nA menor inteira foi: " << tMenor << endl << "Quantidade de positivos digitados: " << cMaior
 		<< endl << "Qauntidade de negativos digitados: " << cMenor << endl; 
 	PAUSA;
-	if(cSubPositivo != 0)						// existe algum valor de entrada no trono?
+	if(cSubPositivo != 0)						// existe algum valor de entrada 
 	{ // existe!
 		cout << "Lista de todas as positivas inteiras do trono: ";
 	
@@ -69,7 +69,7 @@ void main(void)
 		PAUSA;
 	}
 
-	if(cSubNegativo !=0)						// existe algum valor de entrada no trono?
+	if(cSubNegativo !=0)						// existe algum valor de entrada 
 	{
 		cout << "Lista de todas as negativas inteiras no trono: ";
 		for(int y = 0; y < cSubNegativo; y++)
