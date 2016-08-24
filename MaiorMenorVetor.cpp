@@ -14,8 +14,8 @@ void main(void)
 		cWork,												// variavel de trabalho para o BubbleSort
 		nValor,							// recebe cada inteira
 			i,							// indice e contador genérico
-		cSubPositivo,						// sub contador para numeros maiores 	
-		cSubNegativo,						// sub contador para numeros menores 
+		cSubPositivo,					// sub contador para numeros maiores 	
+		cSubNegativo,					// sub contador para numeros menores 
 		cMaior,							// contador do trono Maior
 		cMenor;							// contador do trono menor
 	bool HouveTroca;					// Verificador de troca do bubblesort
@@ -40,13 +40,13 @@ void main(void)
 			}
 		if(nValor > 0)
 		{
-			vetMaior[cSubPositivo] = tMaior;	// o vetor indexado pelo contador vetMaior recebe o valor maior digitado 
+			vetMaior[cSubPositivo] = nValor;	// o vetor indexado pelo contador vetMaior recebe o valor maior digitado 
 			cSubPositivo++;					// acrescenta mais um ao contador
 			cMaior++;
 		}
 		else 
 		{
-			vetMenor[cSubNegativo] = tMenor; // o vetor indexado pelo contador vetMenor recebe o valor menor digitado
+			vetMenor[cSubNegativo] = nValor; // o vetor indexado pelo contador vetMenor recebe o valor menor digitado
 			cSubNegativo++;				// acrescenta mais um ao contador 
 			 cMenor++;
 		}
@@ -58,11 +58,11 @@ void main(void)
 	PAUSA;
 	if(cSubPositivo != 0)						// existe algum valor de entrada 
 	{ // existe!
-		cout << "Lista de todas as positivas inteiras do trono: ";
+		cout << "\nLista de todos os valores positivos digitados: " << endl;
 	
 		for(int x = 0; x < cSubPositivo; x++)
 		{
-		cout << vetMaior[x]	 << "  ";						// exibe todas as maiores inteiras digitadas do trono
+		cout << vetMaior[x]	 << "  ";						// exibe todas as positivas inteiras digitadas do trono
 	
 		}
 		cout << endl << endl;
@@ -71,26 +71,28 @@ void main(void)
 
 	if(cSubNegativo !=0)						// existe algum valor de entrada 
 	{
-		cout << "Lista de todas as negativas inteiras no trono: ";
+		cout << "\nLista de todas as negativas digitados: " << endl;;
 		for(int y = 0; y < cSubNegativo; y++)
 		{
-		cout << vetMenor[y] << "  ";						// exibe todas as menores inteiras digitadas do trono
+		cout << vetMenor[y] << "  ";						// exibe todas as negativas inteiras digitadas
 		}
 		cout << endl << endl;
 		PAUSA;
+		
 	}
 
-	cout << "Todas as inteiras digitadas pelo usuário: ";
+	cout << "\nTodas as inteiras digitadas pelo usuário: " << endl;;
 	for(int t = 0; t < QUANTIDADE_INTEIRAS; t++)
 	{
 		cout << vetTodasInteiras[t] << " ";					// exibe todas as inteiras
 	}
 	cout << endl << endl;
 	PAUSA;
+
 	// Listagem organizada de valores com bubble sort
 	do
 	{
-		HouveTroca = false;
+		HouveTroca = false;									
 		for(i = 0; i < QUANTIDADE_INTEIRAS - 1; i++)
 		{
 			if(vetTodasInteiras[i] > vetTodasInteiras[i + 1])
@@ -102,13 +104,14 @@ void main(void)
 			}
 		
 		} // fim do for
-	} while (HouveTroca == true);
+	} while (HouveTroca == true);							// se for verdade continua! senão sai fora do loop
 	// Exibir a listagem com bublesort
+	cout << "\nListagem de todas as inteiras com BUBBLESORT: " << endl;
 	for(int t = 0; t < QUANTIDADE_INTEIRAS; t++)
 	{
 		cout << vetTodasInteiras[t] << " ";					// exibe todas as inteiras
 	}
-	cout << endl << endl;
+	cout << "\nFim da listagem!" << endl << endl;
 	PAUSA;
 
 } // fim da main
