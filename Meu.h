@@ -1,9 +1,12 @@
-// declarações do programa trono maior e menor
-#include<iostream>
+// declarações do programa Vetores randômicos
 #include<Windows.h>
+#include<iostream>
 using namespace std;
-// Definições do programa
-#define QUANTIDADE_INTEIRAS			3
-#define PAUSA					system("pause")
-#define LIMPAR_TELA				system("cls");
-#define VERDE					system("color A")
+// defines do programa
+#define PAUSA			system("pause")
+#define LIMPAR_TELA		system("cls")
+#define COLOR_VERDE		system("color a")
+#define QTDE_NUMEROS    1000
+
+// funções
+void ListarDecimais(double vetDouble[], int nTamanho, int nQtdePorLinha);
